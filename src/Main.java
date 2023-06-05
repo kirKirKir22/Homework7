@@ -69,9 +69,8 @@ public class Main {
         int percent = 7;
         float contribution = 15000f;
         int target = 12_000_000;
-        int month = 0;
 
-        for (month = 0; contribution < target; month++) {
+        for (int month = 0; contribution < target; month++) {
             contribution = contribution + contribution * percent / 100;
 
             System.out.printf("К месяцу %d накоплено %.2f \n", month + 1, contribution);
@@ -84,12 +83,12 @@ public class Main {
         int percent = 7;
         float contribution = 15000f;
         int target = 12_000_000;
-        int month = 0;
 
-        for (month = 0; contribution < target; month = month + 1) {
+
+        for (int month = 1; contribution < target; month++) {
             contribution = contribution + contribution * percent / 100;
-            if (month % 5 == 0) {
-                System.out.printf("К месяцу %d накоплено %.2f \n", month + 1, contribution);
+            if (month % 6 == 0) {
+                System.out.printf("К месяцу %d накоплено %.2f \n", month, contribution);
             }
         }
     }
@@ -118,7 +117,7 @@ public class Main {
         int friday = 1;
         int month = 31;
 
-        for (friday = 1; friday <= month; friday = friday + 7) {
+        for (; friday <= month; friday = friday + 7) {
             System.out.println("Сегодня пятница, " + friday + " -е число. Необходимо подготовить отчет");
         }
     }
@@ -127,7 +126,7 @@ public class Main {
         System.out.println("Задача 8");
 
         int period = 79;
-        int currentYear = 2000;
+        int currentYear = 2023;
         int before = currentYear - 200;
         int after = currentYear + 100;
 
